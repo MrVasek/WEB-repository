@@ -1,0 +1,51 @@
+<html>
+<head>
+   <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"> 
+    <title>Піцерія "Інь-Янь"</title>
+    </head>
+<body>
+     <h1>Відгуки про Піцерію "Інь-Янь"</h1>
+    <p>Пошук</p> 
+    <input type="text" />
+    <button class="add" onclick="addName()"
+               >Пошук</button>
+    <div class="list" id="list">
+        <p>Ім'я відвідувача і коментар</p>
+             </div>
+        <input type="text" id="name"/>
+        <button class="add" onclick="addName()"
+               >Добавити ім'я</button>
+    <input type="text" id="response"/>
+    <button class="add" onclick="addResponse()"
+               >Добавити відгук</button>
+    
+        <script>
+     function addName() {
+                var elemets = document.getElementById('list');
+                var name = document.getElementById('name');
+                var el = document.createElement("li");
+                if(name.value!=''){
+                    el.innerHTML = '<p>' +  name.value + '</p>' ;
+                    elemets.appendChild(el);
+                    name.value='';
+                }
+            }
+            function addResponse() {
+                var elemets = document.getElementById('list');
+                var response = document.getElementById('response');
+                var el = document.createElement("ol");
+                if(response.value!=''){
+                    el.innerHTML = '<p>' +  response.value + '</p>' ;
+                    elemets.appendChild(el);
+                    name.value='';
+                }
+            }
+            
+       function search{
+           
+       }
+    </script>
+              
+    </body>
+</html>
